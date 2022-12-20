@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cream: hsl(30, 38%, 92%);
+  --dark-cyan: hsl(158, 36%, 37%);
+  --dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Montserrat, sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--cream);
+  position: relative;
+  min-height: 100vh;
+}
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.product-card {
+  display: flex;
+  max-width: 60rem;
+  width: 100%;
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+
+.product-card img {
+  width: 30rem;
+  object-fit: cover;
+}
+
+.product-card div {
+  background-color: white;
+  padding: 3rem;
+}
+
+.product-card header {
+  text-transform: uppercase;
+  color: var(--dark-grayish-blue);
+  margin: 0 0 1.5rem;
+  font-size: 1.4rem;
+  letter-spacing: 3.5px;
+}
+
+.product-card h2 {
+  font-family: Fraunces, sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0 0 3rem;
+  line-height: 1;
+}
+
+.product-card p {
+  font-size: 1.4rem;
+  color: var(--dark-grayish-blue);
+  margin: 2rem 0;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.product-card button {
+  padding: 1.5rem 6rem;
+  outline: none;
+  border: none;
+  background-color: var(--dark-cyan);
+  font-family: inherit;
+  font-weight: bold;
+  color: var(--white);
+  border-radius: 0.8rem;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+
+.product-card button:hover {
+  background-color: var(--dark-blue);
+}
+
+.product-card button > * {
+  vertical-align: middle;
+}
+
+.product-card button img {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+}
+
+.price-information span {
+  color: var(--dark-cyan);
+  font-family: Fraunces, sans-serif;
+  font-size: 3rem;
+  vertical-align: middle;
+}
+
+.price-information small {
+  vertical-align: middle;
+  text-decoration: line-through;
+  font-size: 1.4rem;
+  margin-left: 2rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .product-card {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .product-card {
+    flex-direction: column;
+    width: 95vw;
+  }
+
+  .product-card img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 55%;
+  }
+}
